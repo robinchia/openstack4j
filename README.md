@@ -5,13 +5,13 @@ OpenStack4j
 
 OpenStack4j is a fluent OpenStack client that allows provisioning and control of an OpenStack deployment.   This includes support for Identity, Compute, Image, Network, Block Storage, Telemetry, Data Processing as well as many extensions (LBaaS, FWaaS, Quota-Sets, etc)
 
-## Fix bug 1124  for heat endpionturl
+## Fix bugs
    Openstack4j fix bug so slowly.I change some code for heat endpoint. And update code.
-   1.Fix template bug. Add TemplateValidate bean class and change TemplateResponse class.
-   2.Add the fixed ip in network.
-   3.Add router HA function. 
-   4.Add catch invokeRequest function error.
-   5.Add get serial url function.
+*   1.Fix template bug. Add TemplateValidate bean class and change TemplateResponse class.
+*   2.Add the fixed ip in network.
+*   3.Add router HA function. 
+*   4.Add catch invokeRequest function error.
+*   5.Add get serial url function.
 ## Documentation and Support
 
 * Website: [OpenStack4j.com](http://www.openstack4j.com)
