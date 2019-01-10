@@ -63,6 +63,11 @@ public interface RouterBuilder extends Builder<RouterBuilder, Router> {
 	RouterBuilder route(String destination, String nexthop);
 
 	/**
+	 * @see Router#ha()
+	 */
+	RouterBuilder ha(boolean isHa);
+
+	/**
 	 * Removes the static routes from the router during an update operation
 	 */
 	RouterBuilder noRoutes();

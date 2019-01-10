@@ -17,6 +17,10 @@ import org.openstack4j.openstack.heat.domain.HeatTemplate;
  * 
  * 
  * @author Matthias Reisser
+ *
+ * @author robin
+ *
+ *  fix it for validateTemplate Template
  * 
  */
 public class TemplateServiceImpl extends BaseHeatServices implements TemplateService {
@@ -45,13 +49,13 @@ public class TemplateServiceImpl extends BaseHeatServices implements TemplateSer
     @Override
     public TemplateResponse validateTemplate(Template template) {
         checkNotNull(template);
-
+        TemplateValidate templateValidate =null;
         try {
-            post(String.class, uri("/validate")).entity(template).execute();
+              templateValidate = post(TemplateValidate.class, uri("/validate")).entity(template).execute();
         } catch (RuntimeException re) {
             return TemplateResponse.fail(re.getMessage());
         }
-        return TemplateResponse.success();
+        return  TemplateResponse.success(templateValidate.toString());
     }
 
     /**

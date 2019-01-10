@@ -46,4 +46,11 @@ public interface Router extends Resource, Buildable<RouterBuilder> {
 	 * @return
 	 */
 	Boolean getDistributed();
+
+	/**
+	 * Administrative state of the router
+	 *
+	 * @return true, if the  ha is up
+	 */
+	boolean ha();
 }

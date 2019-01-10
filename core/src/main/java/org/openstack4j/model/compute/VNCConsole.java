@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * Represents a VNC Console which provides VNC connection information for a remote server
  *
  * @author Jeremy Unruh
+ * @author robin
  */
 public interface VNCConsole extends ModelEntity {
 	
@@ -19,6 +20,7 @@ public interface VNCConsole extends ModelEntity {
 		NOVNC("novnc"), 
 		XVPVNC("xvpvnc"),
 		SPICE("spice-html5"),
+		SERIAL("serial"),
 		UNRECOGNIZED("unregonized")
 		;
 		

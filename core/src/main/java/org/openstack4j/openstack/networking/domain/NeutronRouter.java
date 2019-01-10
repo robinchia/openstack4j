@@ -49,6 +49,9 @@ public class NeutronRouter implements Router {
     @JsonProperty("distributed")
     private Boolean distributed;
 
+    @JsonProperty("ha")
+    private Boolean ha;
+
     public static RouterBuilder builder() {
         return new RouterConcreteBuilder();
     }
@@ -142,6 +145,11 @@ public class NeutronRouter implements Router {
     @Override
     public Boolean getDistributed() {
         return distributed;
+    }
+
+    @Override
+    public boolean ha() {
+        return ha;
     }
 
     /**
@@ -271,6 +279,7 @@ public class NeutronRouter implements Router {
             return this;
         }
 
+
         /**
          * {@inheritDoc}
          */
@@ -313,5 +322,13 @@ public class NeutronRouter implements Router {
             m.distributed = distributed;
             return this;
         }
+
+
+        @Override
+        public RouterBuilder ha(boolean isHa) {
+            m.ha = isHa;
+            return this;
+        }
+
     }
 }

@@ -30,12 +30,12 @@ public enum ServiceType {
 
 	private final String serviceName;
 	private final String type;
-        private final Pattern servicePattern;
-        private static final String SERVICE_PATTERN_SUFFIX = "[v|\\d|\\.]*";
+    private final Pattern servicePattern;
+    private static final String SERVICE_PATTERN_SUFFIX = "[v|\\d|\\.]*";
 
 	ServiceType(String serviceName, String type) {
-	this.serviceName = serviceName;
-	this.type = type;
+		this.serviceName = serviceName;
+		this.type = type;
         this.servicePattern = Pattern.compile(Pattern.quote(serviceName) + SERVICE_PATTERN_SUFFIX +
                         "|" + Pattern.quote(type) + SERVICE_PATTERN_SUFFIX +
                         "|" + Pattern.quote(this.name()) + SERVICE_PATTERN_SUFFIX
@@ -50,7 +50,7 @@ public enum ServiceType {
 		return this.type;
 	}
 
-     private Pattern getServicePattern()
+    private Pattern getServicePattern()
     {
         return this.servicePattern;
     }

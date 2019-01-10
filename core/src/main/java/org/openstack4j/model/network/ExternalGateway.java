@@ -1,6 +1,9 @@
 package org.openstack4j.model.network;
 
 import org.openstack4j.model.ModelEntity;
+import org.openstack4j.openstack.networking.domain.NeutronIP;
+
+import java.util.Set;
 
 /**
  * Configurable external gateway modes extension model.  By default, when a gateway is attached to a router using the Neutron L3 extension,
@@ -26,5 +29,7 @@ public interface ExternalGateway extends ModelEntity {
 	 * @return true if SNAT is enabled
 	 */
 	boolean isEnableSnat();
+
+	Set<NeutronIP> getFixedIps();
 	
 }
